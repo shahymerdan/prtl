@@ -2,11 +2,11 @@
 
 # Set variables
 PROJECT_ID=rhbg
-REGION=us-central1
+REGION=europe-west1
 IMAGE_NAME=golan
 ARTIFACT_REGISTRY_LOCATION=$REGION-docker.pkg.dev
 REPO_NAME=main-repo
-SERVICE_NAME=rhbg
+SERVICE_NAME=bgn
 VERSION_FILE=version.txt
 DEFAULT_VERSION=1
 
