@@ -2,7 +2,7 @@
 
 # Set variables
 PROJECT_ID=rhbg-431306
-REGION=europe-west1
+REGION=us-central1
 IMAGE_NAME=golan
 ARTIFACT_REGISTRY_LOCATION=$REGION-docker.pkg.dev
 REPO_NAME=main-repo
