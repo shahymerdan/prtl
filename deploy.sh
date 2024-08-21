@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Set variables
-PROJECT_ID=dict-432621
+PROJECT_ID=642226031510
 REGION=europe-west1
 IMAGE_NAME=golan
 ARTIFACT_REGISTRY_LOCATION=$REGION-docker.pkg.dev
 REPO_NAME=main-repo
-SERVICE_NAME=luk
+SERVICE_NAME=ken
 VERSION_FILE=version.txt
 DEFAULT_VERSION=1
 
