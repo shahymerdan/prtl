@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set variables
-PROJECT_ID=focal-set-433207-f5
+PROJECT_ID=dict-433711
 REGION=europe-west1
 IMAGE_NAME=golan
 ARTIFACT_REGISTRY_LOCATION=$REGION-docker.pkg.dev
