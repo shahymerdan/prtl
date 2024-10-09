@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Set variables
-PROJECT_ID=secure-pursuit-438103-n4
+PROJECT_ID=ekrecaparaktarovenjewelry
 REGION=europe-west1
 IMAGE_NAME=golan
 ARTIFACT_REGISTRY_LOCATION=$REGION-docker.pkg.dev
 REPO_NAME=main-repo
-SERVICE_NAME=luci
+SERVICE_NAME=yun
 VERSION_FILE=version.txt
 DEFAULT_VERSION=1
 
