@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Set variables
-PROJECT_ID=ekrecaparaktarovenjewelry
+PROJECT_ID=neumanvertuci
 REGION=europe-west1
 IMAGE_NAME=golan
 ARTIFACT_REGISTRY_LOCATION=$REGION-docker.pkg.dev
 REPO_NAME=main-repo
-SERVICE_NAME=yun
+SERVICE_NAME=xyz
 VERSION_FILE=version.txt
 DEFAULT_VERSION=1
 
