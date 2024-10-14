@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set variables
-PROJECT_ID=neumanvertuci
+PROJECT_ID=marketing-438620
 REGION=europe-west1
 IMAGE_NAME=golan
 ARTIFACT_REGISTRY_LOCATION=$REGION-docker.pkg.dev
