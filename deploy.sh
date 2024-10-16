@@ -2,7 +2,7 @@
 
 # Set variables
 PROJECT_ID=woodysand-438817
-REGION=europe-west4
+REGION=europe-west1
 IMAGE_NAME=golan
 ARTIFACT_REGISTRY_LOCATION=$REGION-docker.pkg.dev
 REPO_NAME=main-repo
