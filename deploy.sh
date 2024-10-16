@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Set variables
-PROJECT_ID=woodysand-438817
+PROJECT_ID=learnongo-438820
 REGION=europe-west1
 IMAGE_NAME=golan
 ARTIFACT_REGISTRY_LOCATION=$REGION-docker.pkg.dev
 REPO_NAME=main-repo
-SERVICE_NAME=bus
+SERVICE_NAME=xyz
 VERSION_FILE=version.txt
 DEFAULT_VERSION=1
 
