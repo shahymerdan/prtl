@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Set variables
-PROJECT_ID=learnongo-438820
+PROJECT_ID=postegres
 REGION=europe-west1
-IMAGE_NAME=golan
+IMAGE_NAME=pl
 ARTIFACT_REGISTRY_LOCATION=$REGION-docker.pkg.dev
 REPO_NAME=main-repo
-SERVICE_NAME=xyz
+SERVICE_NAME=yns
 VERSION_FILE=version.txt
 DEFAULT_VERSION=1
 
