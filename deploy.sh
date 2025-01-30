@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set variables
-PROJECT_ID=postegres
+PROJECT_ID=ivory-hallway-449318-f0
 REGION=europe-west1
 IMAGE_NAME=pl
 ARTIFACT_REGISTRY_LOCATION=$REGION-docker.pkg.dev
