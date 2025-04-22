@@ -57,7 +57,7 @@ gcloud run deploy $SERVICE_NAME \
 CUSTOM_DOMAIN=api.dictionaryrussian.xyz
 
 echo "Mapping domain $CUSTOM_DOMAIN to service $SERVICE_NAME..."
-gcloud run domain-mappings create \
+gcloud beta run domain-mappings create \
   --service=$SERVICE_NAME \
   --domain=$CUSTOM_DOMAIN \
   --region=$REGION \
