@@ -54,17 +54,6 @@ gcloud run deploy $SERVICE_NAME \
   --allow-unauthenticated \
   --project=$PROJECT_ID
 
-CUSTOM_DOMAIN=api.dictionaryrussian.xyz
-
-echo "Mapping domain $CUSTOM_DOMAIN to service $SERVICE_NAME..."
-gcloud beta run domain-mappings create \
-  --service=$SERVICE_NAME \
-  --domain=$CUSTOM_DOMAIN \
-  --region=$REGION \
-  --project=$PROJECT_ID || echo "Domain mapping may already exist or failed."
-
-
-
 
 # Update the version file
 echo $NEW_VERSION > $VERSION_FILE
