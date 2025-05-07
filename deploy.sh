@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Set variables
-PROJECT_ID=starry-odyssey-458706-m0
+PROJECT_ID=bgmhck
 REGION=europe-west1
 IMAGE_NAME=pl
 ARTIFACT_REGISTRY_LOCATION=$REGION-docker.pkg.dev
 REPO_NAME=main-repo
-SERVICE_NAME=yns
+SERVICE_NAME=bgmh
 VERSION_FILE=version.txt
 DEFAULT_VERSION=1
 
