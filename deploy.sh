@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Set variables
-PROJECT_ID=bgmhck
+PROJECT_ID=yns
 REGION=europe-west1
 IMAGE_NAME=pl
 ARTIFACT_REGISTRY_LOCATION=$REGION-docker.pkg.dev
 REPO_NAME=main-repo
-SERVICE_NAME=bgmh
+SERVICE_NAME=yns
 VERSION_FILE=version.txt
 DEFAULT_VERSION=1
 
