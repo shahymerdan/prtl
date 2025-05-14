@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Set variables
-PROJECT_ID=yns
-REGION=europe-west1
+PROJECT_ID=prj1-459610
+REGION=europe-north1
 IMAGE_NAME=pl
 ARTIFACT_REGISTRY_LOCATION=$REGION-docker.pkg.dev
 REPO_NAME=main-repo
-SERVICE_NAME=yns
+SERVICE_NAME=seo
 VERSION_FILE=version.txt
 DEFAULT_VERSION=1
 
