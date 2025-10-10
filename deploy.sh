@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Set variables
-PROJECT_ID=elegant-wavelet-474716-e6
+PROJECT_ID=pro-pulsar-474309-v8
 REGION=europe-west4
 IMAGE_NAME=pl
 ARTIFACT_REGISTRY_LOCATION=$REGION-docker.pkg.dev
 REPO_NAME=main-repo
-SERVICE_NAME=seo
+SERVICE_NAME=sppp
 VERSION_FILE=version.txt
 DEFAULT_VERSION=1
 
