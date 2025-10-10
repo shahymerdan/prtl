@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Set variables
-PROJECT_ID=prj1-459610
-REGION=europe-north1
+PROJECT_ID=elegant-wavelet-474716-e6
+REGION=europe-west4
 IMAGE_NAME=pl
 ARTIFACT_REGISTRY_LOCATION=$REGION-docker.pkg.dev
 REPO_NAME=main-repo
