@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set variables
-PROJECT_ID=nifty-cabinet-475317-f8
+PROJECT_ID=scenic-lane-475417-d2
 REGION=europe-west4
 IMAGE_NAME=pl
 ARTIFACT_REGISTRY_LOCATION=$REGION-docker.pkg.dev
