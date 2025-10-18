@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Set variables
-PROJECT_ID=scenic-lane-475417-d2
+PROJECT_ID=mineral-pride-475513-g4
 REGION=europe-west4
 IMAGE_NAME=pl
 ARTIFACT_REGISTRY_LOCATION=$REGION-docker.pkg.dev
 REPO_NAME=main-repo
-SERVICE_NAME=spp
+SERVICE_NAME=p
 VERSION_FILE=version.txt
 DEFAULT_VERSION=1
 
