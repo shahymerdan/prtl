@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Set variables
-PROJECT_ID=phonic-goods-475708-e6
+PROJECT_ID=concise-slate-476106-r4
 REGION=europe-west4
 IMAGE_NAME=pl
 ARTIFACT_REGISTRY_LOCATION=$REGION-docker.pkg.dev
 REPO_NAME=main-repo
-SERVICE_NAME=p
+SERVICE_NAME=pq
 VERSION_FILE=version.txt
 DEFAULT_VERSION=1
 
