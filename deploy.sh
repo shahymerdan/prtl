@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Set variables
-PROJECT_ID=phonic-spot-477910-m0
+PROJECT_ID=proud-amphora-477917-c4
 REGION=europe-west2
 IMAGE_NAME=pl
 ARTIFACT_REGISTRY_LOCATION=$REGION-docker.pkg.dev
 REPO_NAME=main-repo
-SERVICE_NAME=pq
+SERVICE_NAME=pp
 VERSION_FILE=version.txt
 DEFAULT_VERSION=1
 
