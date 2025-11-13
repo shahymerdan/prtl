@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set variables
-PROJECT_ID=astral-sunbeam-478118-h9
+PROJECT_ID=central-run-478119-t4
 REGION=europe-west2
 IMAGE_NAME=pl
 ARTIFACT_REGISTRY_LOCATION=$REGION-docker.pkg.dev
