@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set variables
-PROJECT_ID=proud-amphora-477917-c4
+PROJECT_ID=astral-sunbeam-478118-h9
 REGION=europe-west2
 IMAGE_NAME=pl
 ARTIFACT_REGISTRY_LOCATION=$REGION-docker.pkg.dev
