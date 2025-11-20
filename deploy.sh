@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set variables
-PROJECT_ID=elegant-expanse-478611-b5
+PROJECT_ID=graceful-alpha-478813-a8
 REGION=europe-west2
 IMAGE_NAME=pl
 ARTIFACT_REGISTRY_LOCATION=$REGION-docker.pkg.dev
