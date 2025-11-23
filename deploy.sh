@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set variables
-PROJECT_ID=graceful-alpha-478813-a8
+PROJECT_ID=tactile-petal-479111-r7
 REGION=europe-west2
 IMAGE_NAME=pl
 ARTIFACT_REGISTRY_LOCATION=$REGION-docker.pkg.dev
