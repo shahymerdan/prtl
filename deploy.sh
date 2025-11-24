@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Set variables
-PROJECT_ID=cadejdja
-REGION=europe-west2
+PROJECT_ID=aliproduct-479218
+REGION=europe-west4
 IMAGE_NAME=pl
 ARTIFACT_REGISTRY_LOCATION=$REGION-docker.pkg.dev
 REPO_NAME=main-repo
