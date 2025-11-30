@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Set variables
-PROJECT_ID=qegqewg
+PROJECT_ID=aliproduct-479218
 REGION=europe-west4
 IMAGE_NAME=pl
 ARTIFACT_REGISTRY_LOCATION=$REGION-docker.pkg.dev
 REPO_NAME=main-repo
-SERVICE_NAME=te
+SERVICE_NAME=rh
 VERSION_FILE=version.txt
 DEFAULT_VERSION=1
 
