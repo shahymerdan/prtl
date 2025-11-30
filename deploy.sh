@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Set variables
-PROJECT_ID=aliproduct-479218
+PROJECT_ID=sigma-tractor-479815-d9
 REGION=europe-west4
 IMAGE_NAME=pl
 ARTIFACT_REGISTRY_LOCATION=$REGION-docker.pkg.dev
 REPO_NAME=main-repo
-SERVICE_NAME=rh
+SERVICE_NAME=hhh
 VERSION_FILE=version.txt
 DEFAULT_VERSION=1
 
