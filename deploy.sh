@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set variables
-PROJECT_ID=braided-circuit-480621-c8
+PROJECT_ID=fit-freehold-482309-f5
 REGION=europe-west4
 IMAGE_NAME=pl
 ARTIFACT_REGISTRY_LOCATION=$REGION-docker.pkg.dev
