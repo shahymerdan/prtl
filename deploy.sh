@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Set variables
-PROJECT_ID=rosy-dialect-482316-c3
+PROJECT_ID=kahhhpplk
 REGION=europe-west4
 IMAGE_NAME=pl
 ARTIFACT_REGISTRY_LOCATION=$REGION-docker.pkg.dev
 REPO_NAME=main-repo
-SERVICE_NAME=hhh
+SERVICE_NAME=mob
 VERSION_FILE=version.txt
 DEFAULT_VERSION=1
 
