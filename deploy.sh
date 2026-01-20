@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set variables
-PROJECT_ID=udaf-inc
+PROJECT_ID=silver-area-484410-h7
 REGION=europe-west4
 IMAGE_NAME=pl
 ARTIFACT_REGISTRY_LOCATION=$REGION-docker.pkg.dev
