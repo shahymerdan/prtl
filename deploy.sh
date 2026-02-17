@@ -1,61 +1,77 @@
 #!/bin/bash
+set -e  # Exit on any error
 
-# Set variables
-PROJECT_ID=project-ce3fe345-d3c0-4f4d-bee
-REGION=europe-west4
-IMAGE_NAME=pl
-ARTIFACT_REGISTRY_LOCATION=$REGION-docker.pkg.dev
-REPO_NAME=main-repo
-SERVICE_NAME=mob
-VERSION_FILE=version.txt
+# -------------------------------
+# Configuration
+# -------------------------------
+PROJECT_ID="project-ce3fe345-d3c0-4f4d-bee"
+REGION="europe-west4"
+IMAGE_NAME="pl"
+REPO_NAME="main-repo"
+SERVICE_NAME="mob"
+VERSION_FILE="version.txt"
 DEFAULT_VERSION=1
 
-# Determine the current version
-if [ -f $VERSION_FILE ]; then
-  CURRENT_VERSION=$(cat $VERSION_FILE)
-  if [ "$CURRENT_VERSION" -eq "$DEFAULT_VERSION" ]; then
-    NEW_VERSION=$((CURRENT_VERSION + 1))
-  else
-    NEW_VERSION=$((CURRENT_VERSION + 1))
-  fi
+ARTIFACT_REGISTRY="$REGION-docker.pkg.dev/$PROJECT_ID/$REPO_NAME"
+
+# -------------------------------
+# Determine Version
+# -------------------------------
+if [ -f "$VERSION_FILE" ]; then
+  CURRENT_VERSION=$(cat "$VERSION_FILE")
+  NEW_VERSION=$((CURRENT_VERSION + 1))
 else
   NEW_VERSION=$DEFAULT_VERSION
 fi
 
-# Format version as vN
 VERSION="v${NEW_VERSION}"
+echo "Building version: $VERSION"
 
-# Check if Artifact Registry repository exists
-REPO_EXISTS=$(gcloud artifacts repositories list --project=$PROJECT_ID --location=$REGION --format="value(name)" | grep "^$REPO_NAME$")
+# -------------------------------
+# Ensure Artifact Registry exists
+# -------------------------------
+REPO_EXISTS=$(gcloud artifacts repositories list \
+  --project="$PROJECT_ID" \
+  --location="$REGION" \
+  --format="value(name)" | grep "^$REPO_NAME$" || true)
 
 if [ -z "$REPO_EXISTS" ]; then
   echo "Creating Artifact Registry repository..."
-  gcloud artifacts repositories create $REPO_NAME \
+  gcloud artifacts repositories create "$REPO_NAME" \
     --repository-format=Docker \
-    --location=$REGION \
+    --location="$REGION" \
     --description="Docker repository for NGINX proxy" \
-    --project=$PROJECT_ID
+    --project="$PROJECT_ID"
 fi
 
-# Build Docker image
-echo "Building Docker image with version ${VERSION}..."
-docker build -t $ARTIFACT_REGISTRY_LOCATION/$PROJECT_ID/$REPO_NAME/$IMAGE_NAME:$VERSION .
+# -------------------------------
+# Build Docker Image with Tags
+# -------------------------------
+echo "Building Docker image..."
+docker build \
+  -t "$ARTIFACT_REGISTRY/$IMAGE_NAME:$VERSION" \
+  -t "$ARTIFACT_REGISTRY/$IMAGE_NAME:latest" .
 
-# Push Docker image to Artifact Registry
-echo "Pushing Docker image to Artifact Registry..."
-docker push $ARTIFACT_REGISTRY_LOCATION/$PROJECT_ID/$REPO_NAME/$IMAGE_NAME:$VERSION
+# -------------------------------
+# Push Docker Image
+# -------------------------------
+echo "Pushing Docker image..."
+docker push "$ARTIFACT_REGISTRY/$IMAGE_NAME:$VERSION"
+docker push "$ARTIFACT_REGISTRY/$IMAGE_NAME:latest"
 
+# -------------------------------
 # Deploy to Cloud Run
+# -------------------------------
 echo "Deploying to Cloud Run..."
-gcloud run deploy $SERVICE_NAME \
-  --image=$ARTIFACT_REGISTRY_LOCATION/$PROJECT_ID/$REPO_NAME/$IMAGE_NAME:$VERSION \
+gcloud run deploy "$SERVICE_NAME" \
+  --image="$ARTIFACT_REGISTRY/$IMAGE_NAME:$VERSION" \
   --platform=managed \
-  --region=$REGION \
+  --region="$REGION" \
   --allow-unauthenticated \
-  --project=$PROJECT_ID
+  --project="$PROJECT_ID"
 
-
-# Update the version file
-echo $NEW_VERSION > $VERSION_FILE
-
-echo "Deployment completed with version ${VERSION}."
+# -------------------------------
+# Update Version File
+# -------------------------------
+echo "$NEW_VERSION" > "$VERSION_FILE"
+echo "Deployment complete! Version: $VERSION"
