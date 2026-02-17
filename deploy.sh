@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e  # Exit on any error
+set -e  # Exit immediately if any command fails
 
 # -------------------------------
 # Configuration
@@ -45,19 +45,13 @@ if [ -z "$REPO_EXISTS" ]; then
 fi
 
 # -------------------------------
-# Build Docker Image with Tags
+# Build and Push Docker Image using Cloud Build
 # -------------------------------
-echo "Building Docker image..."
-docker build \
-  -t "$ARTIFACT_REGISTRY/$IMAGE_NAME:$VERSION" \
-  -t "$ARTIFACT_REGISTRY/$IMAGE_NAME:latest" .
-
-# -------------------------------
-# Push Docker Image
-# -------------------------------
-echo "Pushing Docker image..."
-docker push "$ARTIFACT_REGISTRY/$IMAGE_NAME:$VERSION"
-docker push "$ARTIFACT_REGISTRY/$IMAGE_NAME:latest"
+echo "Building and pushing Docker image via Cloud Build..."
+gcloud builds submit . \
+  --project="$PROJECT_ID" \
+  --tag="$ARTIFACT_REGISTRY/$IMAGE_NAME:$VERSION" \
+  --tag="$ARTIFACT_REGISTRY/$IMAGE_NAME:latest"
 
 # -------------------------------
 # Deploy to Cloud Run
@@ -74,4 +68,4 @@ gcloud run deploy "$SERVICE_NAME" \
 # Update Version File
 # -------------------------------
 echo "$NEW_VERSION" > "$VERSION_FILE"
-echo "Deployment complete! Version: $VERSION"
+echo "Deployment completed successfully! Version: $VERSION"
