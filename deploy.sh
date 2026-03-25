@@ -4,7 +4,7 @@ set -e  # Exit immediately if any command fails
 # -------------------------------
 # Configuration
 # -------------------------------
-PROJECT_ID="aodaooaodskk"
+PROJECT_ID="vaulted-keel-491306-e4"
 REGION="europe-west4"
 IMAGE_NAME="pl"
 REPO_NAME="main-repo"
